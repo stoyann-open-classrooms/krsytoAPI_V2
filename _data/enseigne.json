@@ -1,0 +1,16 @@
+[
+    {
+        "_id": "637a3694e5bc335f796a4951",
+        "name": "Geant st marie",
+        "address": "7 rue Henri Schmidt. Vallée des Colons , New Caledonia, Nouméa",
+        "groupe": "Geant casino",
+        "web": "https://www.facebook.com/GeantCasino.NC"
+    },
+    {
+        "_id": "637a3694e5bc335f796a4952",
+        "name": "Geant Dumbéa Mall",
+        "address": "1 boulevard du Rail calédonien - Koucokweta, Koutio-Kouéta, New Caledonia, 98830",
+        "web": "https://www.facebook.com/dumbea.mall/",
+        "groupe": "Geant casino"
+    }
+]

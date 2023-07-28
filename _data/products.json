@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "637a3694e5bc235f796a4951",
+    "productCategory": "337a2e4122b12690420041e3",
+    "codeBarre": "1234567890",
+    "marque": "Brand 1",
+    "designation": "Product 1",
+    "genericName": "Generic Name 1",
+    "quantity": "100g",
+    "ingredients": ["ingredient1", "ingredient2", "ingredient3"],
+    "garbageTypes": ["337a2e4122b12690420041d2", "337a2e4122b12690420041d3"],
+    "plasticTypes": ["737a3694e5fc335f796a4942", "737a3694e5fc335f796a4945"],
+    "allergens": ["allergen1", "allergen2"],
+    "additives": ["64c226e1d8996071250543a3"],
+    "containsPalmOil": false,
+    "nutritionFacts": {
+      "energy": { "per100g": "100 kcal", "perPortion": "20 kcal" },
+      "fats": { "per100g": "5 g", "perPortion": "1 g" },
+      "sugars": { "per100g": "10 g", "perPortion": "2 g" }
+    }
+  }
+   
+  ]

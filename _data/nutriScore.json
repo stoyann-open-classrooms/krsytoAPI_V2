@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "937a3694e5fc335f796a4951",
+    "score": "A",
+    "photos": "nutri-score-A.svg",
+    "detail": "Cette note indique que le produit alimentaire est considéré comme étant de bonne qualité nutritionnelle. Il est recommandé de privilégier les produits ayant cette note pour une alimentation équilibrée."
+  },
+  {
+    "_id": "938a3694e5fc335f796a4952",
+    "score": "B",
+    "photos": "nutri-score-B.svg",
+    "detail": "Cette note signifie que le produit alimentaire possède une qualité nutritionnelle satisfaisante. Il peut être inclus dans une alimentation équilibrée, mais il est conseillé de ne pas en abuser."
+  },
+  {
+    "_id": "939a3694e5fc335f796a4953",
+    "score": "C",
+    "photos": "nutri-score-C.svg",
+    "detail": "Cette note indique que le produit alimentaire a une qualité nutritionnelle modérée. Il est recommandé de le consommer avec modération et d'équilibrer son alimentation avec d'autres aliments plus sains."
+  },
+  {
+    "_id": "940a3694e5fc335f796a4954",
+    "score": "D",
+    "photos": "nutri-score-D.svg",
+    "detail": "Cette note signifie que le produit alimentaire a une qualité nutritionnelle moyenne à faible. Il est conseillé de limiter sa consommation et de privilégier des aliments plus sains pour maintenir une alimentation équilibrée."
+  },
+  {
+    "_id": "941a3694e5fc335f796a4955",
+    "score": "E",
+    "photos": "nutri-score-E.svg",
+    "detail": "Cette note indique que le produit alimentaire a une qualité nutritionnelle faible. Il est préférable d'éviter sa consommation régulière et de le remplacer par des aliments plus sains et nutritifs."
+  },
+  {
+    "_id": "942a3694e5fc335f796a4956",
+    "score": "Non defini",
+    "photos": "nutriscore-unknown.svg",
+    "detail": ""
+  }
+]

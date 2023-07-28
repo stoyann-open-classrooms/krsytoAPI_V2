@@ -1,0 +1,51 @@
+[
+  {
+    "_id": "337a2e4122b12690420041c1",
+    "organisme": "Cegelec",
+    "garbageTypes": ["337a2e4122b12690420041d5"],
+    "telephone": "+(687) 73 43 29",
+    "email": "",
+    "adresse": "250 ROUTE DE LA BAIE DES DAMES 98800 NOUMEA"
+  },
+  {
+    "_id": "337a2e4122b12690420041c3",
+    "organisme": "SAS CALEDONIE SANTE",
+    "garbageTypes": ["337a2e4122b12690420041d5"],
+    "telephone": "+(687) 24 38 07",
+    "email": "",
+    "adresse": "56 BOULEVARD JOSEPH WAMYTAN, 98835 DUMBEA"
+  },
+  {
+    "_id": "337a2e4122b12690420041c4",
+    "organisme": "ATECO",
+    "garbageTypes": ["337a2e4122b12690420041d6"],
+    "telephone": "+(687) 27 97 97",
+    "email": "a.moniot@ateco.nc",
+    "adresse": "51 rue Auer, 98800 Nouméa"
+  },
+  {
+    "_id": "337a2e4122b12690420041c5",
+    "organisme": "EMC DUCOS",
+    "garbageTypes": ["337a2e4122b12690420041d8"],
+
+    "telephone": "+(687) 26 02 60",
+    "email": "pontbascule@emc.nc",
+    "adresse": "12 Avenue Baie de Koutio, 98800 Nouméa"
+  },
+  {
+    "_id": "337a2e4122b12690420041c6",
+    "organisme": "TECH MASTER",
+    "garbageTypes": ["337a2e4122b12690420041d8"],
+    "telephone": "+(687) 44 54 48",
+    "email": "techmaster@mail.com",
+    "adresse": "1 RUE JEAN-FRANCOIS CHERRIER, 98800 Nouméa"
+  },
+  {
+    "_id": "337a2e4122b12690420041c7",
+    "organisme": "Ville de Nouméa",
+    "garbageTypes": ["337a2e4122b12690420041d3", "337a2e4122b12690420041d2","337a2e4122b12690420041d1"],
+    "telephone": "+(687) 14 54 88",
+    "email": "noumeamaville@mail.com",
+    "adresse": "1 RUE JEAN-FRANCOIS CHERRIER, 98800 Nouméa"
+  }
+]

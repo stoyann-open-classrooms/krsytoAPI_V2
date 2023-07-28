@@ -1,0 +1,39 @@
+[
+    {
+      "_id": "637a3694e5fc335f796a4951",
+      "score": "A",
+      "photos": "Eco-score-A.svg",
+      "detail": "Cette note indique que le produit alimentaire a un faible impact environnemental. Il est considéré comme étant écologiquement responsable et respectueux de l'environnement."
+    },
+    {
+      "_id": "638a3694e5fc335f796a4951",
+      "score": "B",
+      "photos": "Eco-score-B.svg",
+      "detail": "Cette note signifie que le produit alimentaire a un impact environnemental modéré. Il est généralement plus respectueux de l'environnement que la moyenne des produits similaires, mais il reste encore des améliorations possibles."
+    },
+    {
+      "_id": "639a3694e5fc335f796a4951",
+      "score": "C",
+      "photos": "Eco-score-C.svg",
+      "detail": "Cette note indique que le produit alimentaire a un impact environnemental moyen. Il peut être considéré comme étant dans la moyenne en termes de durabilité, mais il existe des alternatives plus écologiques."
+    },
+    {
+      "_id": "640a3694e5fc335f796a4951",
+      "score": "D",
+      "photos": "Eco-score-D.svg",
+      "detail": "Cette note signifie que le produit alimentaire a un impact environnemental élevé. Il est préférable de limiter sa consommation ou de trouver des alternatives plus durables."
+    },
+    {
+      "_id": "641a3694e5fc335f796a4951",
+      "score": "E",
+      "photos": "Eco-score-E.svg",
+      "detail": "Cette note indique que le produit alimentaire a un impact environnemental très élevé. Il est recommandé d'éviter sa consommation et de privilégier des alternatives plus respectueuses de l'environnement."
+    },
+    {
+      "_id": "642a3694e5fc335f796a4951",
+      "score": "Non defini",
+      "photos": "eco-score-unknow.png",
+      "detail": ""
+    }
+  ]
+  

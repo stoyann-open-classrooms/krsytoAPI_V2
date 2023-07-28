@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "337a2e4122b12690420041e1",
+      "name": "Snack"
+    },
+    {
+        "_id": "337a2e4122b12690420041e2",
+      "name": "Sauce et condiments"
+    },
+    {
+        "_id": "337a2e4122b12690420041e3",
+      "name": "Produits laitiers"
+    }
+    ,
+    {
+        "_id": "337a2e4122b12690420041e4",
+      "name": "Viande"
+    },
+    {
+        "_id": "337a2e4122b12690420041e5",
+      "name": "Fruits et légumes"
+    },
+    {
+        "_id": "337a2e4122b12690420041e6",
+      "name": "Poissons"
+    }
+    
+  
+  ]
+  
