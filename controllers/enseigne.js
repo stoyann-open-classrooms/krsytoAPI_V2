@@ -95,27 +95,32 @@ exports.getEnseignesInRadius = asyncHandler(async (req, res, next) => {
   });
 });
 
-// @desc Upload photo for enseigne
-// @route PUT /api/v1/enseignes/:id/photo
-// @access Private
+// @desc      Upload photo for enseigne 
+// @route     PUT /api/v1/enseignes/:id/photo
+// @access    Private
 exports.enseignePhotoUpload = asyncHandler(async (req, res, next) => {
-  const enseigne = await Enseigne.findById(req.params.id);
+  const enseigne = await Enseigne.findById(req.params.id)
 
   if (!enseigne) {
     return next(
-      new ErrorResponse(`Enseigne not found with id of ${req.params.id}`, 404)
-    );
+      new ErrorResponse(
+        `product  not found with id of ${req.params.id}`,
+        404,
+      ),
+    )
   }
 
   if (!req.files) {
-    return next(new ErrorResponse(`Please upload a file`, 400));
+    return next(new ErrorResponse(`Please upload a file`, 400))
   }
 
-  const file = req.files.file;
+  const file = req.files.photo
+
+  //   console.log(file)
 
   // Make sure the image is a photo
   if (!file.mimetype.startsWith('image')) {
-    return next(new ErrorResponse(`Please upload an image file`, 400));
+    return next(new ErrorResponse(`Please upload an image file`, 400))
   }
 
   // Check filesize
@@ -123,25 +128,29 @@ exports.enseignePhotoUpload = asyncHandler(async (req, res, next) => {
     return next(
       new ErrorResponse(
         `Please upload an image less than ${process.env.MAX_FILE_UPLOAD}`,
-        400
-      )
-    );
+        400,
+      ),
+    )
   }
 
   // Create custom filename
-  file.name = `photo_${enseigne._id}${path.parse(file.name).ext}`;
+  file.name = `enseigne_photo_${enseigne._id}${
+    path.parse(file.name).ext
+  }`
 
-  file.mv(`${process.env.FILE_UPLOAD_PATH}/${file.name}`, async err => {
+  file.mv(`${process.env.FILE_UPLOAD_PATH}/${file.name}`, async (err) => {
     if (err) {
-      console.error(err);
-      return next(new ErrorResponse(`Problem with file upload`, 500));
+      console.error(err)
+      return next(new ErrorResponse(`Problem with file upload`, 500))
     }
 
-    await Enseigne.findByIdAndUpdate(req.params.id, { photo: file.name });
+    await Enseigne.findByIdAndUpdate(req.params.id, {
+      photo: file.name,
+    })
 
     res.status(200).json({
       success: true,
-      data: file.name
-    });
-  });
-});
+      data: file.name,
+    })
+  })
+})
