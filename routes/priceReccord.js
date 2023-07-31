@@ -22,7 +22,7 @@ router
 router
   .route('/:id')
   .get(getPriceRecord)
-  .put(protect, authorize('admin'), updatePriceRecord)
-  .delete(protect, authorize('admin'), deletePriceRecord);
+  .put( updatePriceRecord)
+  .delete( deletePriceRecord);
 
 module.exports = router;

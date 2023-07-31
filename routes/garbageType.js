@@ -18,12 +18,12 @@ const VoluntaryDropPoint = require('../models/VoluntaryDropPoint')
 router
   .route('/')
   .get(advancedResults(GarbageType, 'voluntaryDropPoints'), getGarbageTypes)
-  .post(protect, authorize('admin'), createGarbageType)
+  .post( createGarbageType)
 
 router
   .route('/:id')
   .get(getGarbageType)
-  .put(protect, authorize('admin'), updateGarbageType)
-  .delete(protect, authorize('admin'), deleteGarbageType)
+  .put( updateGarbageType)
+  .delete( deleteGarbageType)
 
 module.exports = router
