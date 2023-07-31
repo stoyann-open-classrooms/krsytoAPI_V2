@@ -7,7 +7,7 @@ const ProductSchema = new mongoose.Schema(
 
     productFamilly: {
       type: String,
-      enum: ['Alimentaires', 'Cosmétiques', 'Animaux'],
+      enum: ['Alimentaires', 'Cosmétiques', 'Animaux' , 'Vêtements et accessoires' , 'Électronique', 'Maison et jardin', 'Santé', 'Livres et médias', 'Sport et loisirs' , 'Bébé et enfant', 'Automobile', 'Autre'],
       default: 'Alimentaires'
     },
 
