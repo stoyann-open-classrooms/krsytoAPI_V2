@@ -8,11 +8,12 @@ const {
   getEnseignesInRadius,
   enseignePhotoUpload
 } = require('../controllers/enseigne');
+const priceReccordRouter = require('./priceReccord')
 const advancedResults = require('../middlewares/advancedResults');
 const Enseigne = require('../models/Enseigne');
-
 const router = express.Router();
 
+router.use('/:productId/priceReccords', priceReccordRouter)
 router
   .route('/')
   .get(advancedResults(Enseigne), getEnseignes)

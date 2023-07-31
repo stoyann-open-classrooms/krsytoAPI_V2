@@ -70,6 +70,20 @@ exports.getPriceRecordsByStore = asyncHandler(async (req, res, next) => {
 
   res.status(200).json({ success: true, data: priceRecords });
 });
+  // @desc    Get all price records for a specific products
+// @route   GET /api/v1/pricerecords/product/:productId
+// @access  Public
+exports.getPriceRecordsByProduct = asyncHandler(async (req, res, next) => {
+  const priceRecords = await PriceRecord.find({ product: req.params.productId });
+
+  if (!priceRecords || priceRecords.length === 0) {
+    return next(
+      new ErrorResponse(`No price records found for the product with id of ${req.params.productId}`, 404)
+    );
+  }
+
+  res.status(200).json({ success: true, data: priceRecords });
+});
 
 
 
