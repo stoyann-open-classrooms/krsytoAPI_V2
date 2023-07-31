@@ -71,20 +71,20 @@ exports.updateProductCategory = asyncHandler(
 //@access:          Private
 exports.deleteProductCategory = asyncHandler(
   async (req, res, next) => {
-    const productCategory = await productCategory.findById(
+    const productCategory = await ProductCategory.findById(
       req.params.id,
     )
 
     if (!productCategory) {
       return next(
         new ErrorResponse(
-          `product category not found with ID of ${req.params.id}`,
+          `Product category not found with ID of ${req.params.id}`,
           404,
         ),
       )
     }
 
-    ProductCategory.remove()
+    productCategory.remove()
 
     res.status(200).json({ success: true, data: {} })
   },

@@ -2,6 +2,7 @@ const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middlewares/async');
 const PriceRecord = require('../models/PriceReccord');
 const Product = require('../models/Product');
+const Enseigne = require('../models/Enseigne');
 const PriceReccord = require('../models/PriceReccord');
 
 // @desc    Get all price records
@@ -55,19 +56,25 @@ exports.createPriceRecord = asyncHandler(async (req, res, next) => {
   })
 
 
+  // @desc    Get all price records for a specific store
+// @route   GET /api/v1/pricerecords/store/:storeId
+// @access  Public
+exports.getPriceRecordsByStore = asyncHandler(async (req, res, next) => {
+  const priceRecords = await PriceRecord.find({ enseigne: req.params.enseigneId });
+
+  if (!priceRecords || priceRecords.length === 0) {
+    return next(
+      new ErrorResponse(`No price records found for the store with id of ${req.params.enseigneId}`, 404)
+    );
+  }
+
+  res.status(200).json({ success: true, data: priceRecords });
+});
 
 
-// // @desc    Create new price record
-// // @route   POST /api/v1/pricerecords
-// // @access  Private
-// exports.createPriceRecord = asyncHandler(async (req, res, next) => {
-//   const priceRecord = await PriceRecord.create(req.body);
 
-//   res.status(201).json({
-//     success: true,
-//     data: priceRecord
-//   });
-// });
+
+
 
 // @desc    Update price record
 // @route   PUT /api/v1/pricerecords/:id

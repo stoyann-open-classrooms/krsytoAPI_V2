@@ -30,23 +30,34 @@ const ProductSchema = new mongoose.Schema(
     additives: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Additive' }],
     containsPalmOil: { type: Boolean, default: false },
 
-    // Nutrition facts
-    nutritionFacts: {
-      energy: { per100g: String, perPortion: String },
-      fats: { per100g: String, perPortion: String },
-      saturatedFats: { per100g: String, perPortion: String },
-      carbohydrates: { per100g: String, perPortion: String },
-      sugars: { per100g: String, perPortion: String },
-      dietaryFibers: { per100g: String, perPortion: String },
-      proteins: { per100g: String, perPortion: String },
-      salt: { per100g: String, perPortion: String },
-      alcohol: { per100g: String, perPortion: String },
-      fruitsVegetablesNutsAndRapeseedWalnutAndOliveOils: {
-        per100g: String,
-        perPortion: String,
-      },
-      portionSize: String,
-    },
+// Nutrition facts
+nutritionFacts: {
+  energy: { per100g: Number, perPortion: Number },
+  fats: { per100g: Number, perPortion: Number },
+  monoUnsaturatedFats: { per100g: Number, perPortion: Number },
+  polyUnsaturatedFats: { per100g: Number, perPortion: Number },
+  transFats: { per100g: Number, perPortion: Number },
+  cholesterol: { per100g: Number, perPortion: Number },
+  sodium: { per100g: Number, perPortion: Number },
+  potassium: { per100g: Number, perPortion: Number },
+  calcium: { per100g: Number, perPortion: Number },
+  iron: { per100g: Number, perPortion: Number },
+  vitaminA: { per100g: Number, perPortion: Number },
+  vitaminC: { per100g: Number, perPortion: Number },
+  saturatedFats: { per100g: Number, perPortion: Number },
+  carbohydrates: { per100g: Number, perPortion: Number },
+  sugars: { per100g: Number, perPortion: Number },
+  dietaryFibers: { per100g: Number, perPortion: Number },
+  proteins: { per100g: Number, perPortion: Number },
+  salt: { per100g: Number, perPortion: Number },
+  alcohol: { per100g: Number, perPortion: Number },
+  fruitsVegetablesNutsAndRapeseedWalnutAndOliveOils: {
+    per100g: Number,
+    perPortion: Number,
+  },
+  portionSize: String,
+},
+
 
     // Product scores
     ecoScore: { type: mongoose.Schema.Types.ObjectId, ref: 'EcoScore' },
@@ -72,6 +83,7 @@ const ProductSchema = new mongoose.Schema(
       enum: [
         'Fabriquée en Nouvelle-Calédonie',
         'Transformée en Nouvelle-Calédonie',
+        'Inconnu',
         'Importée',
       ],
       default: 'Importée',

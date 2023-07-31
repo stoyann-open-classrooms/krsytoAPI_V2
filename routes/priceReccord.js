@@ -5,6 +5,7 @@ const {
   getPriceRecord,
   updatePriceRecord,
   deletePriceRecord,
+  getPriceRecordsByStore,
 } = require('../controllers/priceReccord');
 
 const PriceRecord = require('../models/PriceReccord');
@@ -24,5 +25,7 @@ router
   .get(getPriceRecord)
   .put( updatePriceRecord)
   .delete( deletePriceRecord);
+
+ 
 
 module.exports = router;
