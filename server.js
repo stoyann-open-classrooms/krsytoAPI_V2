@@ -70,7 +70,7 @@ app.use(fileupload())
 // // Rate limiting
 const limiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 10 mins
-  max: 500,
+  max: 1000,
 })
  app.use(limiter)
 
