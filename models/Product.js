@@ -14,7 +14,7 @@ const ProductSchema = new mongoose.Schema(
     productCategory: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'ProductCategory',
-      required: true,
+     
     },
 
     codeBarre: { type: String, unique: true, required: true },
