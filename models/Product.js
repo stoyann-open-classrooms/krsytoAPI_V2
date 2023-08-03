@@ -11,7 +11,6 @@ const ProductSchema = new mongoose.Schema(
       default: 'Alimentaires'
     },
   
-
     marque: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Marque',
@@ -90,7 +89,7 @@ nutritionFacts: {
         'Inconnu',
         'Importée',
       ],
-      default: 'Importée',
+      default: 'Inconnu',
       required: true,
     },
 
