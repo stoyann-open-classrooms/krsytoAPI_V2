@@ -16,6 +16,7 @@ const MarqueSchema = new mongoose.Schema(
         maxlength: [300, 'Remarque cannot be more than 300 characters'],
         default: 'Aucun détail pour ce déchet',
       },
+      
     country: {
       type: String,
     },

@@ -19,7 +19,7 @@ const AdditiveSchema = new mongoose.Schema(
 
     function: {
       type: String,
-      enum: ['Colorant', "Support",'Conservateur', 'Conservateur, agent de blanchiment (freine le brunissement)', 'Antioxydant', 'Antioxydant, agent de texture', "Régulateur d'acidité","Édulcorant", "Agent d'enrobage", "Exhausteur de goût", "Agent de traitement des farines", "Antiagglomérant", "Séquestrant", "Agent de rétention de la couleur", "Gaz de conditionnement", "Humectant", "Gaz de conditionnement",  'Agent de texture'      ],
+      enum: ['Colorant', "Support",'Conservateur', 'Conservateur, agent de blanchiment (freine le brunissement)', 'Antioxydant', 'Antioxydant, agent de texture', "Régulateur d'acidité","Édulcorant", "Agent d'enrobage", "Exhausteur de goût", "Agent de traitement des farines", "Antiagglomérant", "Séquestrant", "Agent de rétention de la couleur", "Gaz de conditionnement", "Humectant", "Gaz de conditionnement",  'Agent de texture' ],
     },
     danger: {
       type: String,
