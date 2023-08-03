@@ -12,7 +12,14 @@ const EnseigneSchema = new mongoose.Schema(
       maxlength: [50, 'Name can not be more than 50 characters']
     },
 
+    type: {
+      type: String,
+      enum: ['Petite surface', 'Grande surface', 'Station', 'Autres'],
+  
+    },
+
     photo: { type: String, default: 'no-photo.png' },
+    
     web: { type: String },
  
  

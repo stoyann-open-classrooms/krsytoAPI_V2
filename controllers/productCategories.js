@@ -22,7 +22,7 @@ exports.getProductCategories = asyncHandler(async (req, res, next) => {
 exports.getProductCategory = asyncHandler(async (req, res, next) => {
   const productCategory = await ProductCategory.findById(
     req.params.id,
-  )
+  ).populate('product')
 
   if (!productCategory) {
     return next(

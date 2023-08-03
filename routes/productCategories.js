@@ -14,7 +14,7 @@ const advancedResults = require('../middlewares/advancedResults')
 router
   .route('/')
   .get(
-    advancedResults(ProductCategory),
+    advancedResults(ProductCategory ),
     getProductCategories,
   )
   .post(createProductCategory)

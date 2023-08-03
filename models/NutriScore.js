@@ -5,6 +5,7 @@ const NutriScoreSchema = new mongoose.Schema(
     score: {
       type: String,
       enum: ['A', 'B', 'C', 'D', 'E', 'Non defini'],
+
     },
 
     detail: {

@@ -42,6 +42,7 @@ const additives = require('./routes/additive.js')
 const enseignes = require('./routes/enseigne.js')
 const priceReccords = require('./routes/priceReccord.js')
 const scannedProducts = require('./routes/scannedProduct.js')
+const marques = require('./routes/marques.js')
 
 // initialize express  application
 const app = express()
@@ -106,6 +107,7 @@ app.use('/krysto_scan/api/v1/additives', additives)
 app.use('/krysto_scan/api/v1/enseignes', enseignes)
 app.use('/krysto_scan/api/v1/priceReccords', priceReccords)
 app.use('/krysto_scan/api/v1/scannedProducts', scannedProducts)
+app.use('/krysto_scan/api/v1/marques', marques)
 
 app.use(errorHandler)
 

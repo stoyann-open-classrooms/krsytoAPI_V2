@@ -5,6 +5,7 @@ const NovaScoreSchema = new mongoose.Schema(
     score: {
       type: String,
       enum: ['1', '2', '3', '4', 'Non defini'],
+  
     },
     detail: {
       type: String,

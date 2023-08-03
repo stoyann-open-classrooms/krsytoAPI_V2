@@ -9,24 +9,22 @@ const ProductCategorySchema = new mongoose.Schema(
       required: true,
     },
   },
-
   {
     timestamps: true,
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
-  },
+  }
 )
 
 // reverse populate with virtuals
-
 ProductCategorySchema.virtual('product', {
   ref: 'Product',
   localField: '_id',
-  foreignField: 'ProductCategory',
+  foreignField: 'productCategory',
   justOne: false,
 })
 
-module.exports = mongoose.model(
-  'ProductCategory',
-  ProductCategorySchema,
-)
+// Création du modèle de catégorie de produits basé sur le schéma
+const ProductCategory = mongoose.model('ProductCategory', ProductCategorySchema)
+
+module.exports = ProductCategory
