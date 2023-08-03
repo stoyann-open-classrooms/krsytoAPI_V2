@@ -6,6 +6,7 @@ const {
   getNutriScore,
   deleteNutriScore,
   updateNutriScore,
+  nutriScorePhotoUpload,
 } = require('../controllers/nutriScore')
 
 const NutriScore = require('../models/NutriScore')
@@ -24,4 +25,5 @@ router
   .delete(deleteNutriScore)
   .put(updateNutriScore)
 
+  router.route('/:id/photo').put(nutriScorePhotoUpload)
 module.exports = router

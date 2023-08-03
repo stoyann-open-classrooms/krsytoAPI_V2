@@ -6,6 +6,7 @@ const {
   getEcoScore,
   deleteEcoScore,
   updateEcoScore,
+  ecoScorePhotoUpload,
 } = require('../controllers/ecoScore')
 
 const NutriScore = require('../models/EcoScore')
@@ -19,5 +20,5 @@ router
   .get(advancedResults(NutriScore), getEcoScores)
   .post(createEcoScore)
 router.route('/:id').get(getEcoScore).delete(deleteEcoScore).put(updateEcoScore)
-
+router.route('/:id/photo').put(ecoScorePhotoUpload)
 module.exports = router

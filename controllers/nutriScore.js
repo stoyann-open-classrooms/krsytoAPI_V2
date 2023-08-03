@@ -1,3 +1,4 @@
+const path = require('path')
 const NutriScore = require('../models/NutriScore')
 const ErrorResponse = require('../utils/errorResponse')
 const asyncHandler = require('../middlewares/async')
@@ -86,57 +87,62 @@ exports.deleteNutriScore = asyncHandler(async (req, res, next) => {
   res.status(200).json({ success: true, data: {} })
 })
 
-//@desc: Upload photos for nutri score
-//@route: PUT /krysto/api/v2/nutriScores/:id/photo
-//@access: Private
-//@desc: Upload photo for nutri score
-//@route: PUT /krysto/api/v2/nutriScores/:id/photo
-//@access: Private
+// @desc      Upload photo for product 
+// @route     PUT /api/v1/products/:id/photo
+// @access    Private
 exports.nutriScorePhotoUpload = asyncHandler(async (req, res, next) => {
   const nutriScore = await NutriScore.findById(req.params.id)
 
   if (!nutriScore) {
     return next(
       new ErrorResponse(
-        `Nutri score not found with ID of ${req.params.id}`,
+        `score nutri  not found with id of ${req.params.id}`,
         404,
       ),
     )
   }
 
-  if (!req.file) {
+  if (!req.files) {
     return next(new ErrorResponse(`Please upload a file`, 400))
   }
 
-  const file = req.file
+  const file = req.files.photo
 
-  // Check if the uploaded file is an image
+  //   console.log(file)
+
+  // Make sure the image is a photo
   if (!file.mimetype.startsWith('image')) {
     return next(new ErrorResponse(`Please upload an image file`, 400))
   }
 
-  // Check file size
-  const maxSizeInBytes = process.env.MAX_FILE_UPLOAD
-  if (file.size > maxSizeInBytes) {
+  // Check filesize
+  if (file.size > process.env.MAX_FILE_UPLOAD) {
     return next(
       new ErrorResponse(
-        `The file exceeds the maximum upload size of ${maxSizeInBytes} bytes`,
+        `Please upload an image less than ${process.env.MAX_FILE_UPLOAD}`,
         400,
       ),
     )
   }
 
-  // Generate filename
-  const uploadPath = process.env.FILE_UPLOAD_PATH
-  const ext = path.parse(file.name).ext
-  const filename = `photo__${uuidv4()}${ext}`
+  // Create custom filename
+  file.name = `nutri_photo_${nutriScore._id}${
+    path.parse(file.name).ext
+  }`
 
-  // Move and update the database
-  await file.mv(`${uploadPath}/${filename}`)
-  await NutriScore.findByIdAndUpdate(req.params.id, { photo: filename })
+  file.mv(`${process.env.FILE_UPLOAD_PATH}/${file.name}`, async (err) => {
+    if (err) {
+      console.error(err)
+      return next(new ErrorResponse(`Problem with file upload`, 500))
+    }
 
-  res.status(200).json({
-    success: true,
-    data: filename,
+    await NutriScore.findByIdAndUpdate(req.params.id, {
+      photo: file.name,
+    })
+
+    res.status(200).json({
+      success: true,
+      data: file.name,
+    })
   })
 })

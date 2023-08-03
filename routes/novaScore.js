@@ -6,6 +6,7 @@ const {
   getNovaScore,
   deleteNovaScore,
   updateNovaScore,
+  novaScorePhotoUpload,
 } = require('../controllers/novaScore')
 
 const NovaScore = require('../models/NovaScore')
@@ -23,5 +24,6 @@ router
   .get(getNovaScore)
   .delete(deleteNovaScore)
   .put(updateNovaScore)
+  router.route('/:id/photo').put(novaScorePhotoUpload)
 
 module.exports = router
