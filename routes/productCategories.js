@@ -8,7 +8,7 @@ const {
 } = require('../controllers/productCategories')
 
 const router = express.Router()
-const ProductCategory = require('../models/Product')
+const ProductCategory = require('../models/ProductCategory')
 const advancedResults = require('../middlewares/advancedResults')
 
 router

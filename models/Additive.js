@@ -4,12 +4,15 @@ const AdditiveSchema = new mongoose.Schema(
   {
 
     code: {
-      type: String
+      type: String,
+      required:   [true, `Merci d'ajouter un code pour l'additif`]
+     
     },
 
     name: {
       type: String,
       required: true,
+      required:   [true, `Merci d'ajouter un nom pour l'additif`]
     },
 
     bioAuthorization: {
@@ -28,7 +31,7 @@ const AdditiveSchema = new mongoose.Schema(
 
     description: {
       type: String,
-      required: true,
+   
     },
 
 

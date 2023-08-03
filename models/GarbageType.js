@@ -17,7 +17,7 @@ const GarbageTypeSchema = new mongoose.Schema(
 
     details: {
       type: String,
-      maxlength: [300, 'Remarque cannot be more than 300 characters'],
+      maxlength: [300, 'Une remarque ne peut pas faire plus de 300 caractères'],
       default: 'Aucun détail pour ce déchet',
     },
   },

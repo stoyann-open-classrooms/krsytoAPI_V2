@@ -4,6 +4,12 @@ const geocoder = require('../utils/geocoder')
 
 const ProductCategorySchema = new mongoose.Schema(
   {
+
+    ProductFamilly: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'ProductFamilly',
+    },
+
     name: {
       type: String,
       required: true,

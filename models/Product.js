@@ -3,26 +3,22 @@ const mongoose = require('mongoose')
 // Définition du schéma pour les articles
 const ProductSchema = new mongoose.Schema(
   {
-    // General product information
-
-    productFamilly: {
-      type: String,
-      enum: ['Alimentaires', 'Cosmétiques', 'Animaux' , 'Vêtements et accessoires' , 'Électronique', 'Maison et jardin', 'Santé', 'Livres et médias', 'Sport et loisirs' , 'Bébé et enfant', 'Automobile', 'Autre'],
-      default: 'Alimentaires'
-    },
   
     marque: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Marque',
     },
+
+
     productCategory: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'ProductCategory',
     },
 
     codeBarre: { type: String, unique: true, required: true },
-    marque: { type: String, required: true },
-    designation: { type: String, required: true },
+    
+    designation: { type: String },
+
     genericName: { type: String },
     quantity: { type: String },
     photo: { type: String, default: 'no-photo.png' },

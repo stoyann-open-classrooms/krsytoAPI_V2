@@ -6,10 +6,10 @@ const EnseigneSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, 'Please add a name'],
+      required: [true, `Merci d'ajouter un nom pour l'enseigne`],
       unique: true,
       trim: true,
-      maxlength: [50, 'Name can not be more than 50 characters']
+      maxlength: [50, 'Le nom de ne pas conternir plus de 50 caractéres']
     },
 
     type: {
