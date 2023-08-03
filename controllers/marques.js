@@ -2,7 +2,7 @@ const Marque = require('../models/Marque')
 const ErrorResponse = require('../utils/errorResponse')
 const asyncHandler = require('../middlewares/async')
 const path = require('path')
-const uuidv4 = require('uuid').v4
+
 
 // @description: Get all marques
 // @route: GET /api/v1/marques

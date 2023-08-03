@@ -20,10 +20,7 @@ router
   .route("/")
   .get(advancedResults(ScannedProduct), getScannedProducts)
   .post(createScannedProduct);
-router.get(
-  advancedResults(ScannedProduct),
-  getUserScannedProducts
-);
+router.get(advancedResults(ScannedProduct), getUserScannedProducts);
 
 router
   .route("/:id")

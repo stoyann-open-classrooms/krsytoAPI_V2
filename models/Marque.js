@@ -10,6 +10,13 @@ const MarqueSchema = new mongoose.Schema(
       trim: true,
       maxlength: [50, "Name can not be more than 50 characters"],
     },
+    subname: {
+      type: String,
+      required: [true, "Please add a subname"],
+      unique: true,
+      trim: true,
+      maxlength: [50, "sub Name can not be more than 50 characters"],
+    },
 
     détails: {
         type: String,
