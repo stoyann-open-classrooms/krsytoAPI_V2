@@ -10,7 +10,12 @@ const ProductSchema = new mongoose.Schema(
       enum: ['Alimentaires', 'Cosmétiques', 'Animaux' , 'Vêtements et accessoires' , 'Électronique', 'Maison et jardin', 'Santé', 'Livres et médias', 'Sport et loisirs' , 'Bébé et enfant', 'Automobile', 'Autre'],
       default: 'Alimentaires'
     },
+  
 
+    marque: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Marque',
+    },
     productCategory: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'ProductCategory',
