@@ -89,3 +89,4 @@ exports.deleteProductCategory = asyncHandler(
     res.status(200).json({ success: true, data: {} })
   },
 )
+

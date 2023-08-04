@@ -17,7 +17,7 @@ const ProductSchema = new mongoose.Schema(
 
     codeBarre: { type: String, unique: true, required: true },
     
-    designation: { type: String },
+    designation: { type: String , required: true },
 
     genericName: { type: String },
     quantity: { type: String },
@@ -28,6 +28,8 @@ const ProductSchema = new mongoose.Schema(
     allergens: [{ type: String }],
     additives: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Additive' }],
     containsPalmOil: { type: Boolean, default: false },
+    bio: { type: Boolean, default: false },
+    containsGluten: { type: Boolean, default: true },
 
 // Nutrition facts
 nutritionFacts: {

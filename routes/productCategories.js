@@ -5,6 +5,7 @@ const {
   createProductCategory,
   updateProductCategory,
   deleteProductCategory,
+  getProductCategoriesByProductFamily,
 } = require('../controllers/productCategories')
 
 const router = express.Router()
@@ -23,5 +24,8 @@ router
   .get(getProductCategory)
   .put(updateProductCategory)
   .delete(deleteProductCategory)
+
+  
+
 
 module.exports = router

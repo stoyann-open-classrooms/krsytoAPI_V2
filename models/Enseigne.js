@@ -14,7 +14,7 @@ const EnseigneSchema = new mongoose.Schema(
 
     type: {
       type: String,
-      enum: ['Petite surface', 'Grande surface', 'Station', 'Autres'],
+      enum: ['Supermarchés ', 'Magasins de proximité', 'Magasins discount', 'Magasins de produits bio', 'Hyper-marchés', 'Magasins spécialisés', 'Stations-service', 'E-commerces', 'Pharmacies / Parapharmacies'],
   
     },
 
