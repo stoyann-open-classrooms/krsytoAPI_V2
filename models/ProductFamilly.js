@@ -11,7 +11,6 @@ const ProductFamillySchema = new mongoose.Schema(
       unique: true,
       maxlength: [50, "Name can not be more than 50 characters"],
     },
-  
   },
   {
     timestamps: true,

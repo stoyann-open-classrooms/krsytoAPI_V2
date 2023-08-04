@@ -7,14 +7,22 @@ const {
   updateProduct,
   deleteProduct,
   productPhotoUpload,
-  findProductByCodeBarre, // Ajout de la nouvelle méthode
+  findProductByCodeBarre,
+  getAveragePrice, 
 } = require('../controllers/Products')
+
 const priceReccordRouter = require('./priceReccord')
+
 const router = express.Router({ mergeParams: true })
+
 const { protect, authorize } = require('../middlewares/auth')
+
 const Product = require('../models/Product')
+
 const advancedResults = require('../middlewares/advancedResults')
+
 router.use('/:productId/priceReccords', priceReccordRouter)
+
 router
   .route('/')
   .get(
@@ -33,7 +41,10 @@ router
 
 router.route('/:id/photo').put(productPhotoUpload)
 
-// Nouvelle route pour trouver un produit recyclable par code barre
+// New route to find a recyclable product by bar code
 router.route('/codeBarre/:codeBarre').get(findProductByCodeBarre)
+
+// New route to get the average price of a product
+router.route('/:id/average-price').get(getAveragePrice)
 
 module.exports = router

@@ -11,6 +11,8 @@ exports.getScannedProducts = asyncHandler(async (req, res, next) => {
   const scannedProducts = await ScannedProduct.find();
   res.status(200).json({ success: true, data: scannedProducts });
 });
+
+
 // @desc    Get all scanned products for a specific user
 // @route   GET /api/v1/users/:userId/scannedproducts
 // @access  Private/User
