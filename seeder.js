@@ -93,7 +93,6 @@ const importData = async () => {
 
 
     await PlasticType.create(plasticTypes)
-    await Product.create(products)
     await VoluntaryDropPoint.create(voluntaryDropPoints)
     await GarbageType.create(garbageTypes)
     await NutriScore.create(nutriScores)
@@ -123,7 +122,7 @@ const deleteData = async () => {
 
    
     await PlasticType.deleteMany()
-    await Product.deleteMany()
+  
     await ProductCategory.deleteMany()
     await VoluntaryDropPoint.deleteMany()
     await GarbageType.deleteMany()

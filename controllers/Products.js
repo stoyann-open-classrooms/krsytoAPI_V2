@@ -242,10 +242,10 @@ exports.getProduct = asyncHandler(async (req, res, next) => {
 //@access:          Public
 exports.findProductByCodeBarre = asyncHandler(
   async (req, res, next) => {
-    const { codeBarre } = req.params
+    const { code } = req.params
 
     const product = await Product.findOne({
-      codeBarre,
+      code,
     }).populate(
       'plasticTypes productCategory garbageTypes nutriScore ecoScore additives novaScore priceReccords',
     )
@@ -253,7 +253,7 @@ exports.findProductByCodeBarre = asyncHandler(
     if (!product) {
       return res.status(404).json({
         success: false,
-        error: `Product with code barre ${codeBarre} not found.`,
+        error: `Product with code barre ${code} not found.`,
       })
     }
 

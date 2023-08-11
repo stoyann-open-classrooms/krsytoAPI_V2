@@ -42,7 +42,7 @@ router
 router.route('/:id/photo').put(productPhotoUpload)
 
 // New route to find a recyclable product by bar code
-router.route('/codeBarre/:codeBarre').get(findProductByCodeBarre)
+router.route('/codeBarre/:code').get(findProductByCodeBarre)
 
 // New route to get the average price of a product
 router.route('/:id/average-price').get(getAveragePrice)

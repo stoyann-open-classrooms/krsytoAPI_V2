@@ -9,9 +9,18 @@ const MessageSchema = new mongoose.Schema(
       maxlength: [50, 'Name can not be more than 30 characters'],
     },
 
+    product: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Product',
+    },
+
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User',
+    },
+
     name: {
       type: String,
-      required: [true, 'Please add name'],
       trim: true,
       maxlength: [30, 'Name can not be more than 30 characters'],
     },
@@ -43,6 +52,7 @@ const MessageSchema = new mongoose.Schema(
       type: String,
       maxlength: [5000, 'Message can not be more than 5000 characters'],
     },
+    
     status: {
       // Array of strings
       type: String,

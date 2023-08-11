@@ -15,9 +15,9 @@ const ProductSchema = new mongoose.Schema(
       ref: 'ProductCategory',
     },
 
-    codeBarre: { type: String, unique: true, required: true },
+    code: { type: String, unique: true, required: true },
     
-    designation: { type: String , required: true },
+    designation: { type: String},
 
     genericName: { type: String },
     quantity: { type: String },
