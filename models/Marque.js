@@ -3,6 +3,13 @@ const mongoose = require("mongoose");
 
 const MarqueSchema = new mongoose.Schema(
   {
+
+    ProductCategory: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'ProductCategory',
+    },
+
+
     name: {
       type: String,
       required: [true, "Please add a name"],
